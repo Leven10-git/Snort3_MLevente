@@ -1,0 +1,217 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "PD5070BC1AA9F8304"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "8.3.0",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "Google",
+          "urlPath": "/application?app=google"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "Facebook",
+          "urlPath": "/application?app=facebook"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "Amazon",
+          "urlPath": "/application?app=amazon"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "Emag",
+          "urlPath": "/application?app=emag"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "Twiiter",
+          "urlPath": "/application?app=twitter"
+        }
+      ],
+      "title": "Panel Title",
+      "type": "bargauge"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 33,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Snort3 AppID Acces Number",
+  "uid": "bs8Hmsh7z",
+  "version": 1,
+  "weekStart": ""
+}

@@ -21,10 +21,261 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "PD5070BC1AA9F8304"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 7,
+      "options": {
+        "displayLabels": [
+          "value"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "pieType": "donut",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "8.3.0",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "name": "rate",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "TCP Traffic",
+          "urlPath": "/application?app=tcp"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "name": "rate",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "UDP Traffic",
+          "urlPath": "/application?app=udp"
+        }
+      ],
+      "title": "UDP VS TCP Traffic rate",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "PD5070BC1AA9F8304"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "8.3.0",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "name": "access",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "curl",
+          "urlPath": "/application?app=curl"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "name": "access",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "dhcp",
+          "urlPath": "/application?app=dhcp"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "name": "access",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "ssh",
+          "urlPath": "/application?app=ssh"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "name": "access",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "ntp",
+          "urlPath": "/application?app=ntp"
+        }
+      ],
+      "title": "Services accessed",
+      "type": "bargauge"
+    },
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
@@ -53,10 +304,83 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 9,
+        "h": 8,
         "w": 12,
         "x": 0,
-        "y": 0
+        "y": 8
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.3.0",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "",
+              ""
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Inspected packets",
+          "urlPath": "/application?app=daq"
+        }
+      ],
+      "title": "Number of inspected packets",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "PD5070BC1AA9F8304"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 9
       },
       "id": 2,
       "options": {
@@ -82,29 +406,7 @@
           "fields": [
             {
               "jsonPath": "$.number_accessed",
-              "type": "number"
-            },
-            {
-              "jsonPath": "$.pkt_time",
-              "language": "jsonpath",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "method": "GET",
-          "queryParams": "",
-          "refId": "Google",
-          "urlPath": "/application?app=google"
-        },
-        {
-          "cacheDurationSeconds": 300,
-          "datasource": {
-            "type": "marcusolsson-json-datasource",
-            "uid": "PD5070BC1AA9F8304"
-          },
-          "fields": [
-            {
-              "jsonPath": "$.number_accessed",
+              "name": "access",
               "type": "number"
             },
             {
@@ -129,6 +431,7 @@
           "fields": [
             {
               "jsonPath": "$.number_accessed",
+              "name": "access",
               "type": "number"
             },
             {
@@ -153,30 +456,7 @@
           "fields": [
             {
               "jsonPath": "$.number_accessed",
-              "type": "number"
-            },
-            {
-              "jsonPath": "$.pkt_time",
-              "language": "jsonpath",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "hide": false,
-          "method": "GET",
-          "queryParams": "",
-          "refId": "Emag",
-          "urlPath": "/application?app=emag"
-        },
-        {
-          "cacheDurationSeconds": 300,
-          "datasource": {
-            "type": "marcusolsson-json-datasource",
-            "uid": "PD5070BC1AA9F8304"
-          },
-          "fields": [
-            {
-              "jsonPath": "$.number_accessed",
+              "name": "access",
               "type": "number"
             },
             {
@@ -191,9 +471,59 @@
           "queryParams": "",
           "refId": "Twiiter",
           "urlPath": "/application?app=twitter"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "name": "access",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "Stackoverflow",
+          "urlPath": "/application?app=stackoverflow"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "PD5070BC1AA9F8304"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.number_accessed",
+              "name": "access",
+              "type": "number"
+            },
+            {
+              "jsonPath": "$.pkt_time",
+              "language": "jsonpath",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "GitHub",
+          "urlPath": "/application?app=github"
         }
       ],
-      "title": "Panel Title",
+      "title": "Applications accessed",
       "type": "bargauge"
     }
   ],
@@ -212,6 +542,6 @@
   "timezone": "",
   "title": "Snort3 AppID Acces Number",
   "uid": "bs8Hmsh7z",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }

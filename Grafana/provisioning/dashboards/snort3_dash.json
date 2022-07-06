@@ -195,7 +195,7 @@
           "method": "GET",
           "queryParams": "",
           "refId": "curl",
-          "urlPath": "/application?app=curl"
+          "urlPath": "/application?app=curl-service"
         },
         {
           "cacheDurationSeconds": 300,
@@ -220,7 +220,7 @@
           "method": "GET",
           "queryParams": "",
           "refId": "dhcp",
-          "urlPath": "/application?app=dhcp"
+          "urlPath": "/application?app=dhcp-service"
         },
         {
           "cacheDurationSeconds": 300,
@@ -244,8 +244,8 @@
           "hide": false,
           "method": "GET",
           "queryParams": "",
-          "refId": "ssh",
-          "urlPath": "/application?app=ssh"
+          "refId": "https",
+          "urlPath": "/application?app=https-service"
         },
         {
           "cacheDurationSeconds": 300,
@@ -270,7 +270,7 @@
           "method": "GET",
           "queryParams": "",
           "refId": "ntp",
-          "urlPath": "/application?app=ntp"
+          "urlPath": "/application?app=ntp-service"
         }
       ],
       "title": "Services accessed",
@@ -494,8 +494,8 @@
           "hide": false,
           "method": "GET",
           "queryParams": "",
-          "refId": "Stackoverflow",
-          "urlPath": "/application?app=stackoverflow"
+          "refId": "w3schools",
+          "urlPath": "/application?app=w3schools.com"
         },
         {
           "cacheDurationSeconds": 300,
@@ -542,6 +542,6 @@
   "timezone": "",
   "title": "Snort3 AppID Acces Number",
   "uid": "bs8Hmsh7z",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }

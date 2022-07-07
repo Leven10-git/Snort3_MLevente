@@ -4,6 +4,7 @@ Run Snort3 inside a conatiner in order to check the access of web applications o
 
 ![image](https://user-images.githubusercontent.com/68270364/145672764-e88598a2-9ecb-4fe8-806e-eb5dcd7042ef.png)
 
+
 The Alerts are processed by a custom build API, which passes the information from Snort3 to Grafana. 
 
 ```
